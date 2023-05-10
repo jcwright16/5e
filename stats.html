@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <script src="stats.js"></script>
+    <script src="save.js"></script>
     <link rel="stylesheet" type="text/css" href="stats.css">
     <head>
         <meta charset="UTF-8">
@@ -24,126 +25,126 @@
                 <!--Ability Scores-->
                 <div class="ability" id="str-ability">
                     <div><label for="strength">Strength</label></div>
-                    <div><input class="ability-score" type="number" id="strength"></div>
-                    <div><input class="ability-mod" type="text" id="str-mod"></div>
+                    <div><input class="myInput ability-score" type="number" id="strength"></div>
+                    <div><input class="myInput ability-mod" type="text" id="str-mod"></div>
                 </div>
                 <div class="skill-set" id="str-skills">
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="athletics-prof" onclick="deselect('athletics-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="athletics"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="athletics-prof" onclick="deselect('athletics-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="athletics"></div>
                         <div class="skill-row"><label for="athletics">Athletics</label></div>
                     </div>
                 </div>
                 <div class="ability" id="dex-ability">
                     <div><label for="dexterity">Dexterity</label></div>
-                    <div><input class="ability-score" type="number" id="dexterity"></div>
-                    <div><input class="ability-mod" type="text" id="dex-mod"></div>
+                    <div><input class="myInput ability-score" type="number" id="dexterity"></div>
+                    <div><input class="myInput ability-mod" type="text" id="dex-mod"></div>
                 </div>
                 <div class="skill-set" id="dex-skills">
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="acrobatics-prof" onclick="deselect('acrobatics-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="acrobatics"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="acrobatics-prof" onclick="deselect('acrobatics-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="acrobatics"></div>
                         <div class="skill-row"><label for="acrobatics">Acrobatics</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="sleight-of-hand-prof" onclick="deselect('sleight-of-hand-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="sleight-of-hand"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="sleight-of-hand-prof" onclick="deselect('sleight-of-hand-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="sleight-of-hand"></div>
                         <div class="skill-row"><label for="sleight-of-hand">Sleight of Hand</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="stealth-prof" onclick="deselect('stealth-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="stealth"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="stealth-prof" onclick="deselect('stealth-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="stealth"></div>
                         <div class="skill-row"><label for="stealth">Stealth</label></div>
                     </div>
                 </div>
                 <div class="ability" id="con-ability">
                     <div><label for="constitution">Constitution</label></div>
-                    <div><input class="ability-score" type="number" id="constitution"></div>
-                    <div><input class="ability-mod" type="text" id="con-mod"></div>
+                    <div><input class="myInput ability-score" type="number" id="constitution"></div>
+                    <div><input class="myInput ability-mod" type="text" id="con-mod"></div>
                 </div>
                 <div class="ability" id="int-ability">
                     <div><label for="intelligence">Intelligence</label></div>
-                    <div><input class="ability-score" type="number" id="intelligence"></div>
-                    <div><input class="ability-mod" type="text" id="int-mod"></div>
+                    <div><input class="myInput ability-score" type="number" id="intelligence"></div>
+                    <div><input class="myInput ability-mod" type="text" id="int-mod"></div>
                 </div>
                 <div class="skill-set" id="int-skills">
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="arcana-prof" onclick="deselect('arcana-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="arcana"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="arcana-prof" onclick="deselect('arcana-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="arcana"></div>
                         <div class="skill-row"><label for="arcana">Arcana</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="history-prof" onclick="deselect('history-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="history"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="history-prof" onclick="deselect('history-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="history"></div>
                         <div class="skill-row"><label for="history">History</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="investigation-prof" onclick="deselect('investigation-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="investigation"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="investigation-prof" onclick="deselect('investigation-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="investigation"></div>
                         <div class="skill-row"><label for="investigation">Investigation</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="religion-prof" onclick="deselect('religion-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="religion"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="religion-prof" onclick="deselect('religion-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="religion"></div>
                         <div class="skill-row"><label for="religion">Religion</label></div>
                     </div>
                 </div>
                 <div class="ability" id="wis-ability">
                     <div><label for="wisdom">Wisdom</label></div>
-                    <div><input class="ability-score" type="number" id="wisdom"></div>
-                    <div><input class="ability-mod" type="text" id="wis-mod"></div>
+                    <div><input class="myInput ability-score" type="number" id="wisdom"></div>
+                    <div><input class="myInput ability-mod" type="text" id="wis-mod"></div>
                 </div>
                 <div class="skill-set" id="wis-skills">
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="animal-handling-prof" onclick="deselect('animal-handling-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="animal-handling"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="animal-handling-prof" onclick="deselect('animal-handling-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="animal-handling"></div>
                         <div class="skill-row"><label for="animal-handling">Animal Handling</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="insight-prof" onclick="deselect('insight-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="insight"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="insight-prof" onclick="deselect('insight-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="insight"></div>
                         <div class="skill-row"><label for="insight">Insight</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="medicine-prof" onclick="deselect('medicine-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="medicine"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="medicine-prof" onclick="deselect('medicine-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="medicine"></div>
                         <div class="skill-row"><label for="medicine">Medicine</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="perception-prof" onclick="deselect('perception-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="perception"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="perception-prof" onclick="deselect('perception-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="perception"></div>
                         <div class="skill-row"><label for="perception">Perception</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="survival-prof" onclick="deselect('survival-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="survival"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="survival-prof" onclick="deselect('survival-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="survival"></div>
                         <div class="skill-row"><label for="survival">Survival</label></div>
                     </div>
                 </div>
                 <div class="ability" id="cha-ability">
                     <div><label for="charisma">Charisma</label></div>
-                    <div><input class="ability-score" type="number" id="charisma"></div>
-                    <div><input class="ability-mod" type="text" id="cha-mod"></div>
+                    <div><input class="myInput ability-score" type="number" id="charisma"></div>
+                    <div><input class="myInput ability-mod" type="text" id="cha-mod"></div>
                 </div>
                 <div class="skill-set" id="cha-skills">
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="deception-prof" onclick="deselect('deception-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="deception"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="deception-prof" onclick="deselect('deception-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="deception"></div>
                         <div class="skill-row"><label for="deception">Deception</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="intimidation-prof" onclick="deselect('intimidation-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="intimidation"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="intimidation-prof" onclick="deselect('intimidation-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="intimidation"></div>
                         <div class="skill-row"><label for="intimidation">Intimidation</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="performance-prof" onclick="deselect('performance-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="performance"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="performance-prof" onclick="deselect('performance-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="performance"></div>
                         <div class="skill-row"><label for="performance">Performance</label></div>
                     </div>
                     <div class="skill">
-                        <div class="skill-row"><input type="radio" id="persuasion-prof" onclick="deselect('persuasion-prof')"></div>
-                        <div class="skill-row"><input class="skill-rank" type="number" id="Persuasion"></div>
+                        <div class="skill-row"><input class="myInput" type="radio" id="persuasion-prof" onclick="deselect('persuasion-prof')"></div>
+                        <div class="skill-row"><input class="myInput skill-rank" type="number" id="Persuasion"></div>
                         <div class="skill-row"><label for="persuasion">Persuasion</label></div>
                     </div>
                 </div>
@@ -152,7 +153,7 @@
             <fieldset id="bonus-block">
                 <div class="ability" id="prof-bonus">
                     <div><label for="proficiency-bonus">Proficiency Bonus</label></div>
-                    <div><input class="ability-score" type="number" id="proficiency-bonus"></div>
+                    <div><input class="myInput ability-score" type="number" id="proficiency-bonus"></div>
                 </div>
             </fieldset>
 
@@ -160,58 +161,58 @@
             <fieldset id="info-block">
                 <legend>Character Info</legend>
                 <div class="info-field" id="name-field">
-                    <div><input class="info-text" id="character-name"></div>
+                    <div><input class="myInput info-text" id="character-name"></div>
                     <div><label for="character-name">Character Name</label></div>
                 </div>
                 <div class="info-row" id="info-row-1">
                     <div class="info-field" id="race-field">
-                        <div><input class="info-text" id="race"></div>
+                        <div><input class="myInput info-text" id="race"></div>
                         <div class><label for="race">Race</label></div>
                     </div>
                     <div class="info-field" id="class-field">
-                        <div><input class="info-text" id="class"></div>
+                        <div><input class="myInput info-text" id="class"></div>
                         <div class><label for="class">Class</label></div>
                     </div>
                     <div class="info-field" id="level-field">
-                        <div><input class="info-text" id="level"></div>
+                        <div><input class="myInput info-text" id="level"></div>
                         <div class><label for="level">Level</label></div>
                     </div>
                     <div class="info-field" id="alignment-field">
-                        <div><input class="info-text" id="alignment"></div>
+                        <div><input class="myInput info-text" id="alignment"></div>
                         <div class><label for="alignment">Alignment</label></div>
                     </div>
                     <div class="info-field" id="background-field">
-                        <div><input class="info-text" id="background"></div>
+                        <div><input class="myInput info-text" id="background"></div>
                         <div class><label for="background">Background</label></div>
                     </div>
                 </div>
                 <div class="info-row" id="info-row-2">
                     <div class="info-field" id="age-field">
-                        <div><input class="info-text" id="age"></div>
+                        <div><input class="myInput info-text" id="age"></div>
                         <div class><label for="age">Age</label></div>
                     </div>
                     <div class="info-field" id="size-field">
-                        <div><input class="info-text" id="size"></div>
+                        <div><input class="myInput info-text" id="size"></div>
                         <div class><label for="size">Size</label></div>
                     </div>
                     <div class="info-field" id="height-field">
-                        <div><input class="info-text" id="height"></div>
+                        <div><input class="myInput info-text" id="height"></div>
                         <div class><label for="height">Height</label></div>
                     </div>
                     <div class="info-field" id="weight-field">
-                        <div><input class="info-text" id="weight"></div>
+                        <div><input class="myInput info-text" id="weight"></div>
                         <div class><label for="weight">Weight</label></div>
                     </div>
                     <div class="info-field" id="hair-field">
-                        <div><input class="info-text" id="hair"></div>
+                        <div><input class="myInput info-text" id="hair"></div>
                         <div class><label for="hair">Hair</label></div>
                     </div>
                     <div class="info-field" id="skin-field">
-                        <div><input class="info-text" id="skin"></div>
+                        <div><input class="myInput info-text" id="skin"></div>
                         <div class><label for="skin">Skin</label></div>
                     </div>
                     <div class="info-field" id="eyes-field">
-                        <div><input class="info-text" id="eyes"></div>
+                        <div><input class="myInput info-text" id="eyes"></div>
                         <div class><label for="eyes">Eyes</label></div>
                     </div>
                 </div>
