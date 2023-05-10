@@ -1,0 +1,28 @@
+#notes-grid {
+    display: grid;
+    height: 94vh;
+    width: 98vw;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1vh;
+    font-size: 3vh;
+}
+
+/* Stylize Nav */
+nav a {
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+#notes {
+    grid-area: 1 / 1 / -1 / -1;
+    object-fit: cover;
+}
+
+#piece-of-paper {
+    height: 86vh;
+    width: 95vw;
+    overflow-y: scroll;
+}

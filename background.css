@@ -1,0 +1,66 @@
+/* Configure Main Grid */
+#background-grid {
+    display: grid;
+    height: 94vh;
+    width: 98vw;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1vh;
+    font-size: 3vh;
+}
+
+/* Stylize Nav */
+nav a {
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+#connections-block {
+    grid-area: 1 / 1 / -1 / 3;
+    object-fit: cover;
+}
+
+#connections,
+#personality {
+    display: block;
+}
+
+.connection,
+.personality-div {
+    text-align: center;
+}
+
+#personality-block {
+    grid-area: 1 / 6 / -1 / -1;
+    object-fit: cover;
+}
+
+#backstory-block {
+    grid-area: 1 / 3 / -1 / 6;
+    object-fit: cover;
+}
+
+.guild-input {
+    width: 23vw;
+    text-align: center;
+}
+
+.connection-input {
+    height: 15vh;
+    width: 23vw;
+    overflow-y: scroll;
+}
+
+.personality-input {
+    height: 24vh;
+    width: 23vw;
+    overflow-y: scroll;
+}
+
+#backstory {
+    height: 86vh;
+    width: 40vw;
+    overflow-y: scroll;
+}

@@ -1,0 +1,236 @@
+/* Configure Main Grid */
+#stats-grid {
+    display: grid;
+    height: 94vh;
+    width: 98vw;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1vh;
+    font-size: 2vh;
+}
+
+/* Stylize Nav */
+nav a {
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Arrange Sections */
+#ability-block {
+    grid-area: 1 / 1 / -1 / 4;
+    object-fit: cover;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+#bonus-block {
+    grid-area: 1 / 4 / 3 / 5;
+    object-fit: cover;
+    display: grid;
+}
+
+#info-block {
+    grid-area: 1 / 5 / 3 / -1;
+    object-fit: cover;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#proficiencies-block {
+    grid-area: 3 / 4 / -1 / 10;
+    object-fit: cover;
+}
+
+#feats-block {
+    grid-area: 3 / 10 / -1 / -1;
+    object-fit: cover;
+}
+
+/* Arrange Ability Subsections */
+#str-ability {
+    grid-area: 1 / 1 / 2 / 4;
+    text-align: center;
+}
+#str-skills {
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+#dex-ability {
+    grid-area: 2 / 1 / 3 / 4;
+    text-align: center;
+}
+#dex-skills {
+    grid-area: 2 / 2 / 3 / 4;
+}
+
+#con-ability {
+    grid-area: 3 / 1 / 4 / 4;
+    text-align: center;
+}
+#con-skills {
+    grid-area: 3 / 2 / 4 / 4;
+}
+
+#int-ability {
+    grid-area: 4 / 1 / 5 / 4;
+    text-align: center;
+}
+#int-skills {
+    grid-area: 4 / 2 / 5 / 4;
+}
+
+#wis-ability {
+    grid-area: 5 / 1 / 6 / 4;
+    text-align: center;
+}
+#wis-skills {
+    grid-area: 5 / 2 / 6 / 4;
+}
+
+#cha-ability {
+    grid-area: 6 / 1 / 7 / 4;
+    text-align: center;
+}
+#cha-skills {
+    grid-area: 6 / 2 / 7 / 4;
+}
+
+.ability {
+    position: relative;
+    left: -7vw;
+    z-index: 0;
+}
+
+.ability-score {
+    border-radius: 50%;
+    height: 6vh;
+    width: 6vh;
+    text-align: right;
+    z-index: 0;
+}
+
+.ability-mod {
+    border-radius: 50%;
+    height: 3vh;
+    width: 3vh;
+    position: relative;
+    z-index: 1;
+    top: -2vh;
+}
+
+.skill {
+    display: flex;
+    justify-content: center;
+    float: left;
+    clear: left;
+    position: relative;
+    z-index: 2;
+    font-size: 1.5vh;
+}
+
+.skill-set {
+    padding-top: 2vh;
+}
+
+#str-skills {
+    padding-top: 4vh;
+}
+
+#wis-ability,
+#cha-ability {
+    padding-top: 2vh;
+}
+
+.skill-rank {
+    height: 2vh;
+    width: 6vh;
+    text-align: right;
+}
+
+.skill-row {
+    margin: 0 1vh;
+}
+
+#prof-bonus {
+    grid-area: 1 / 1 / -1 / -1;
+    left: 0;
+    text-align: center;
+    padding-top: 6vh;
+}
+
+/* Arrange Info Subsections */
+
+#name-field {
+    grid-area: 1 / 2 / 3 / 3;
+    padding-top: 10vh;
+    margin-right: 3vw;
+}
+
+#character-name {
+    width: 14vw;
+}
+
+.info-row {
+    padding-top: 4vh;
+}
+
+.info-row .info-field {
+    margin: 0 0.5vh;
+}
+
+#info-row-1 {
+    grid-area: 1 / 3 / 2 / -1;
+    display: flex;
+}
+
+#info-row-2 {
+    grid-area: 2 / 3 / 3 / -1;
+    display: flex;
+}
+
+#race,
+#class,
+#background {
+    width: 9vw;
+}
+
+#level,
+#alignment,
+#size,
+#age {
+    width: 3vw;
+}
+
+#height,
+#weight {
+    width: 5vw;
+}
+
+#hair,
+#skin,
+#eyes {
+    width: 4vw;
+}
+
+/* Arrange Proficiencies Subsections */
+.prof-type {
+    padding-right: 2vw;
+}
+
+.prof-input {
+    width: 30vw;
+    height: 9vh;
+    text-align: left;
+    overflow-y: scroll;
+}
+
+/* Configure Features & Traits Text Box */
+#feats-text {
+    width: 27vw;
+    height: 55vh;
+    overflow-y: scroll;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="combat.js"></script>
+    <link rel="stylesheet" type="text/css" href="combat.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>D&D 5e Character Sheet</title>
+    </head>
+    <body>
+        <nav>
+            <a href="./stats.html">Stats</a>
+            <a href="./inventory.html">Inventory</a>
+            <a href="./combat.html">Combat</a>
+            <a href="./magic.html">Magic</a>
+            <a href="./background.html">Background</a>
+            <a href="./notes.html">Notes</a>
+        </nav>
+
+        <div id="combat-grid">
+            <fieldset id="saving-throw-block">
+                <legend>Saving Throws</legend>
+                <div class="saving-throw" id="str-throw">
+                    <div><input class="throw-input" id="str-throw-input" type="number"></div>
+                    <div><label class="throw-label" id="str-throw-label" for="str-throw-input">STR</label></div>
+                    <div><input class="throw-prof" id="str-throw-prof" type="radio" onclick="deselect('str-throw-prof')"></div>
+                </div>
+                <div class="saving-throw" id="dex-throw">
+                    <div><input class="throw-input" id="dex-throw-input" type="number"></div>
+                    <div><label class="throw-label" id="dex-throw-label" for="dex-throw-input">DEX</label></div>
+                    <div><input class="throw-prof" id="dex-throw-prof" type="radio" onclick="deselect('dex-throw-prof')"></div>
+                </div>
+                <div class="saving-throw" id="con-throw">
+                    <div><input class="throw-input" id="con-throw-input" type="number"></div>
+                    <div><label class="throw-label" id="con-throw-label" for="con-throw-input">CON</label></div>
+                    <div><input class="throw-prof" id="con-throw-prof" type="radio" onclick="deselect('con-throw-prof')"></div>
+                </div>
+                <div class="saving-throw" id="int-throw">
+                    <div><input class="throw-input" id="int-throw-input" type="number"></div>
+                    <div><label class="throw-label" id="int-throw-label" for="int-throw-input">INT</label></div>
+                    <div><input class="throw-prof" id="int-throw-prof" type="radio" onclick="deselect('int-throw-prof')"></div>
+                </div>
+                <div class="saving-throw" id="wis-throw">
+                    <div><input class="throw-input" id="wis-throw-input" type="number"></div>
+                    <div><label class="throw-label" id="wis-throw-label" for="wis-throw-input">WIS</label></div>
+                    <div><input class="throw-prof" id="wis-throw-prof" type="radio" onclick="deselect('wis-throw-prof')"></div>
+                </div>
+                <div class="saving-throw" id="cha-throw">
+                    <div><input class="throw-input" id="cha-throw-input" type="number"></div>
+                    <div><label class="throw-label" id="cha-throw-label" for="cha-throw-input">CHA</label></div>
+                    <div><input class="throw-prof" id="cha-throw-prof" type="radio" onclick="deselect('cha-throw-prof')"></div>
+                </div>
+            </fieldset>
+
+            <fieldset id="move-block">
+                <legend>Movement</legend>
+                <div id="move">
+                    <div class="move-element">
+                        <div><input class="move-input" id="initiative" type="number"></div>
+                        <div><label id="initiative-label" for="initiative">Initiative</label></div>
+                    </div>
+                    <div class="move-element">
+                        <div><input class="move-input" id="speed" type="number"></div>
+                        <div><label id="speed-label" for="speed">Speed</label></div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset id="hp-ac-block">
+                <legend>Health & Armor</legend>
+                <div id="block-vals">
+                    <div class="hp-element" id="ac">
+                        <div><input class="hp-input" id="ac-input" type="number"></div>
+                        <div><label id="ac-label" for="ac-input">Armor Class</label></div>
+                    </div>
+                    <div id="hp">
+                        <div class="hp-element">
+                            <div><input class="hp-input" id="hp-curr" type="number"></div>
+                            <div><label id="hp-curr-label" for="hp-curr">Current HP</label></div>
+                        </div>
+                        <div class="hp-element">
+                            <div><input class="hp-input" id="hp-max" type="number"></div>
+                            <div><label id="hp-max-label" for="hp-max">Max HP</label></div>
+                        </div>
+                        <div class="hp-element">
+                            <div><input class="hp-input" id="hp-temp" type="number"></div>
+                            <div><label id="hp-temp-label" for="hp-temp">Temp HP</label></div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset id="weapon-block">
+                <legend>Weapons</legend>
+                <div id="weapon-table-div">
+                    <table id="weapon-table">
+                        <thead>
+                            <th>Name</th>
+                            <th>ATK Bonus</th>
+                            <th>DMG</th>
+                            <th>Type</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input class="weapon-field" type="text"></td>
+                                <td><input class="weapon-field" type="text"></td>
+                                <td><input class="weapon-field" type="text"></td>
+                                <td><input class="weapon-field" type="text"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button onclick="addRow('weapon-table')">Add row</button>
+                </div>
+                <div id="weapon-notes">
+                    <div id="notes-label">Notes</div>
+                    <div><textarea id="notes"></textarea></div>
+                </div>
+            </fieldset>
+
+            <fieldset id="death-saves">
+                <legend>Death Saves</legend>
+                <div id="save-buttons">
+                    <div id="successes">
+                        <div id="success-label">Successes</div>
+                        <div id="success-buttons">
+                            <input type="radio" id="success-1" onclick="deselect('success-1')">
+                            <input type="radio" id="success-2" onclick="deselect('success-2')">
+                            <input type="radio" id="success-3" onclick="deselect('success-3')">
+                        </div>
+                    </div>
+                    <div id="failures">
+                        <div id="failure-label">Failures</div>
+                        <div id="failure-buttons">
+                            <input type="radio" id="failure-1" onclick="deselect('failure-1')">
+                            <input type="radio" id="failure-2" onclick="deselect('failure-2')">
+                            <input type="radio" id="failure-3" onclick="deselect('failure-3')">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>

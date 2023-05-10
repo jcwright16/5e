@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" type="text/css" href="background.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>D&D 5e Character Sheet</title>
+    </head>
+    <body>
+        <nav>
+            <a href="./stats.html">Stats</a>
+            <a href="./inventory.html">Inventory</a>
+            <a href="./combat.html">Combat</a>
+            <a href="./magic.html">Magic</a>
+            <a href="./background.html">Background</a>
+            <a href="./notes.html">Notes</a>
+        </nav>
+
+        <div id="background-grid">
+            <fieldset id="connections-block">
+                <legend>Connections</legend>
+                <div id="connections">
+                    <div class="connection" id="guild">
+                        <div><label class="connection-label" for="guild">Guild</label></div>
+                        <div><input class="guild-input" type="text"></div>
+                    </div>
+                    <div class="connection" id="bonds">
+                        <div><label class="connection-label" for="bonds">Bonds</label></div>
+                        <div><textarea class="connection-input" id="bonds"></textarea></div>
+                    </div>
+                    <div class="connection" id="contacts">
+                        <div><label class="connection-label" for="contacts">Contacts</label></div>
+                        <div><textarea class="connection-input" id="contacts"></textarea></div>
+                    </div>
+                    <div class="connection" id="allies">
+                        <div><label class="connection-label" for="allies">Allies</label></div>
+                        <div><textarea class="connection-input" id="allies"></textarea></div>
+                    </div>
+                    <div class="connection" id="rivals">
+                        <div><label class="connection-label" for="rivals">Rivals</label></div>
+                        <div><textarea class="connection-input" id="rivals"></textarea></div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset id="personality-block">
+                <label>Personality</label>
+                <div id="personality">
+                    <div class="personality-div">
+                        <div><label class="personality-label" for="traits">Personality Traits</label></div>
+                        <div><textarea class="personality-input" id="traits"></textarea></div>
+                    </div>
+                    <div class="personality-div">
+                        <div><label class="personality-label" for="ideals">Ideals</label></div>
+                        <div><textarea class="personality-input" id="ideals"></textarea></div>
+                    </div>
+                    <div class="personality-div">
+                        <div><label class="personality-label" for="flaws">Flaws</label></div>
+                        <div><textarea class="personality-input" id="flaws"></textarea></div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset id="backstory-block">
+                <legend>Backstory</legend>
+                <div id="backstory-container">
+                    <textarea id="backstory"></textarea>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>

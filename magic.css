@@ -1,0 +1,104 @@
+/* Configure Main Grid */
+#magic-grid {
+    display: grid;
+    height: 94vh;
+    width: 95vw;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 1vh;
+    font-size: 2vh;
+}
+
+/* Stylize Nav */
+nav a {
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+#spell-info-block {
+    grid-area: 1 / 1 / 2 / 3;
+    object-fit: cover;
+}
+
+#spell-info {
+    display: flex;
+    margin: 0 1vw;
+}
+
+.info-field {
+    display: block;
+    text-align: center;
+}
+
+.info-input {
+    height: 4vw;
+    width: 4vw;
+    text-align: right;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+#spell-ability {
+    width: 6vw;
+    text-align: center;
+}
+
+#spell-slot-block {
+    grid-area: 2 / 1 / -1 / 3;
+    object-fit: cover;
+    display: block;
+    font-size: 2.5vh;
+}
+
+#spell-slots {
+    padding-left: 2vw;
+}
+
+.slot {
+    display: flex;
+    padding-top: 1vh;
+}
+
+.slot-level {
+    width: 2vw;
+}
+
+.slot-input {
+    width: 4vw;
+    text-align: center;
+}
+
+#spell-level,
+#total-slots,
+#spent-slots {
+    display: block;
+    text-align: center;
+}
+
+#spell-table-block {
+    grid-area: 1 / 3 / -1 / -1;
+    object-fit: cover;
+}
+
+#spell-name,
+#spell-school {
+    width: 9vw;
+}
+
+#spell-level-input {
+    width: 3vw;
+}
+
+#spell-cast-time,
+#spell-range,
+#spell-components,
+#spell-duration {
+    width: 4vw;
+}
+
+#spell-desc-input {
+    width: 15vw;
+    overflow-y: scroll;
+}

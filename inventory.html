@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="inventory.js"></script>
+    <link rel="stylesheet" type="text/css" href="inventory.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>D&D 5e Character Sheet</title>
+    </head>
+    <body>
+        <nav>
+            <a href="./stats.html">Stats</a>
+            <a href="./inventory.html">Inventory</a>
+            <a href="./combat.html">Combat</a>
+            <a href="./magic.html">Magic</a>
+            <a href="./background.html">Background</a>
+            <a href="./notes.html">Notes</a>
+        </nav>
+
+        <div id="inventory-grid">
+            <!-- Wealth Block-->
+            <fieldset id="wealth-block">
+                <legend>Wealth</legend>
+                <div>
+                    <table id="wealth-table">
+                        <tr id="input-row">
+                            <td></td>
+                            <td class="coin">
+                                <input class="coin-label" id="cp-label" type="text" value="CP" readonly>
+                                <input class="coin-input" id="cp-input" type="number" value="0" min="0">
+                            </td>
+                            <td class="coin">
+                                <input class="coin-label" id="sp-label" type="text" value="SP" readonly>
+                                <input class="coin-input" id="sp-input" type="number" value="0" min="0">
+                            </td>
+                            <td class="coin">
+                                <input class="coin-label" id="ep-label" type="text" value="EP" readonly>
+                                <input class="coin-input" id="ep-input" type="number" value="0" min="0">
+                            </td>
+                            <td class="coin">
+                                <input class="coin-label" id="gp-label" type="text" value="GP" readonly>
+                                <input class="coin-input" id="gp-input" type="number" value="0" min="0">
+                            </td>
+                            <td class="coin">
+                                <input class="coin-label" id="pp-label" type="text" value="PP" readonly>
+                                <input class="coin-input" id="pp-input" type="number" value="0" min="0">
+                            </td>
+                        </tr>
+                        <tr class="conversion-row" id="cp-conversion-row">
+                            <td>CP</td>
+                            <td class="conv-val" id="cp-cp">0</td>
+                            <td class="conv-val" id="sp-cp">0</td>
+                            <td class="conv-val" id="ep-cp">0</td>
+                            <td class="conv-val" id="gp-cp">0</td>
+                            <td class="conv-val" id="pp-cp">0</td>
+                        </tr>
+                        <tr class="conversion-row" id="sp-conversion-row">
+                            <td>SP</td>
+                            <td class="conv-val" id="cp-sp">0</td>
+                            <td class="conv-val" id="sp-sp">0</td>
+                            <td class="conv-val" id="ep-sp">0</td>
+                            <td class="conv-val" id="gp-sp">0</td>
+                            <td class="conv-val" id="pp-sp">0</td>
+                        </tr>
+                        <tr class="conversion-row" id="ep-conversion-row">
+                            <td>EP</td>
+                            <td class="conv-val" id="cp-ep">0</td>
+                            <td class="conv-val" id="sp-ep">0</td>
+                            <td class="conv-val" id="ep-ep">0</td>
+                            <td class="conv-val" id="gp-ep">0</td>
+                            <td class="conv-val" id="pp-ep">0</td>
+                        </tr>
+                        <tr class="conversion-row" id="gp-conversion-row">
+                            <td>GP</td>
+                            <td class="conv-val" id="cp-gp">0</td>
+                            <td class="conv-val" id="sp-gp">0</td>
+                            <td class="conv-val" id="ep-gp">0</td>
+                            <td class="conv-val" id="gp-gp">0</td>
+                            <td class="conv-val" id="pp-gp">0</td>
+                        </tr>
+                        <tr class="conversion-row" id="pp-conversion-row">
+                            <td>PP</td>
+                            <td class="conv-val" id="cp-pp">0</td>
+                            <td class="conv-val" id="sp-pp">0</td>
+                            <td class="conv-val" id="ep-pp">0</td>
+                            <td class="conv-val" id="gp-pp">0</td>
+                            <td class="conv-val" id="pp-pp">0</td>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+
+            <!-- Equipment Block
+            Name, Cost, Damage/AC, Weight, Properties/Notes -->
+            <fieldset id="equipment-block">
+                <legend>Equipment</legend>
+                <div id="table-container">
+                    <table id="equipment-table">
+                        <thead>
+                            <tr id="header-row">
+                                <th>Name</th>
+                                <th>Cost</th>
+                                <th>DMG/AC</th>
+                                <th>Weight</th>
+                                <th colspan="3">Properties/Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="content-row">
+                                <td><input class="item-name" type="text"></td>
+                                <td><input class="item-cost" type="text"></td>
+                                <td><input class="item-dmg-ac" type="text"></td>
+                                <td><input class="item-weight" type="number" value="0"></td>
+                                <td><input class="item-properties" colspan="3" type="text"></td>
+                            </tr>
+                            <tr id="total-row">
+                                <td class="wide-blank"><button onclick="addRow('equipment-table')">Add row</button></td>
+                                <td class="narrow-blank"></td>
+                                <td class="wide-blank"></td>
+                                <td class="narrow-blank" id="total-weight">0</td>
+                                <td class="widest-blank" colspan="3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>

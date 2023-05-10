@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="magic.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
+    <!-- DataTables JS -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="magic.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>D&D 5e Character Sheet</title>
+    </head>
+    <body>
+        <nav>
+            <a href="./stats.html">Stats</a>
+            <a href="./inventory.html">Inventory</a>
+            <a href="./combat.html">Combat</a>
+            <a href="./magic.html">Magic</a>
+            <a href="./background.html">Background</a>
+            <a href="./notes.html">Notes</a>
+        </nav>
+
+        <div id="magic-grid">
+            <fieldset id="spell-info-block">
+                <legend>Caster Info</legend>
+                <div id="spell-info">
+                    <div class="info-field">
+                        <div><input class="info-input" id="spell-ability" type="text"></div>
+                        <div><label id="spell-ability-label" for="spell-ability">Casting Ability</label></div>
+                    </div>
+                    <div class="info-field">
+                        <div><input class="info-input" id="spell-dc" type="number"></div>
+                        <div><label id="spell-dc-label" for="spell-dc">Spell Save DC</label></div>
+                    </div>
+                    <div class="info-field">
+                        <div><input class="info-input" id="spell-atk" type="number"></div>
+                        <div><label id="spell-atk-label" for="spell-atk">Spell ATK Bonus</label></div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset id="spell-table-block">
+                <legend>Spell Table</legend>
+                <table id="spell-table">
+                    <thead>
+                        <th>Name</th>
+                        <th>School</th>
+                        <th>Level</th>
+                        <th>Cast Time</th>
+                        <th>Range</th>
+                        <th>Components</th>
+                        <th>Duration</th>
+                        <th>Description</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input id="spell-name" type="text"></td>
+                            <td><input id="spell-school" type="text"></td>
+                            <td><input id="spell-level-input" type="number" min="0" max="9"></td>
+                            <td><input id="spell-cast-time" type="text"></td>
+                            <td><input id="spell-range" type="text"></td>
+                            <td><input id="spell-components" type="text"></td>
+                            <td><input id="spell-duration" type="text"></td>
+                            <td><textarea id="spell-desc-input">A Description of the spell...</textarea></td>
+                            <td><button class="delete-btn">Delete</button></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <td><button id="add-btn">Add Row</button><button class="save-btn">Save</button></td>
+                    </tfoot>
+                </table>
+            </fieldset>
+
+            <fieldset id="spell-slot-block">
+                <legend>Spell Slots</legend>
+                <div id="spell-slots">
+                    <div>
+                        <div class="slot">
+                            <div class="spell-level">
+                                <div><label for="lvl-1">Lvl</label></div>
+                                <div><input class="slot-level" id="lvl-1" type="number" value="1" readonly></div>
+                            </div>
+                            <div class="total-slots">
+                                <div><label for="total-slots-1">Total</label></div>
+                                <div><input class="slot-input" id="total-slots-1" type="number"></div>
+                            </div>
+                            <div class="spent-slots">
+                                <div><label for="spent-slots-1">Spent</label></div>
+                                <div><input class="slot-input" id="spent-slots-1" type="number"></div>
+                            </div>
+                        </div>
+                        <div class="slot">
+                            <div class="spell-level">
+                                <div><label for="lvl-2">Lvl</label></div>
+                                <div><input class="slot-level" id="lvl-2" type="number" value="2" readonly></div>
+                            </div>
+                            <div class="total-slots">
+                                <div><label for="total-slots-2">Total</label></div>
+                                <div><input class="slot-input" id="total-slots-2" type="number"></div>
+                            </div>
+                            <div class="spent-slots">
+                                <div><label for="spent-slots-2">Spent</label></div>
+                                <div><input class="slot-input" id="spent-slots-2" type="number"></div>
+                            </div>
+                        </div>
+                        <div class="slot">
+                            <div class="spell-level">
+                                <div><label for="lvl-3">Lvl</label></div>
+                                <div><input class="slot-level" id="lvl-3" type="number" value="3" readonly></div>
+                            </div>
+                            <div class="total-slots">
+                                <div><label for="total-slots-3">Total</label></div>
+                                <div><input class="slot-input" id="total-slots-3" type="number"></div>
+                            </div>
+                            <div class="spent-slots">
+                                <div><label for="spent-slots-3">Spent</label></div>
+                                <div><input class="slot-input" id="spent-slots-3" type="number"></div>
+                            </div>
+                        </div>
+                        <div class="slot">
+                            <div class="spell-level">
+                                <div><label for="lvl-4">Lvl</label></div>
+                                <div><input class="slot-level" id="lvl-4" type="number" value="4" readonly></div>
+                            </div>
+                            <div class="total-slots">
+                                <div><label for="total-slots-4">Total</label></div>
+                                <div><input class="slot-input" id="total-slots-4" type="number"></div>
+                            </div>
+                            <div class="spent-slots">
+                                <div><label for="spent-slots-4">Spent</label></div>
+                                <div><input class="slot-input" id="spent-slots-4" type="number"></div>
+                            </div>
+                        </div>
+                        <div class="slot">
+                            <div class="spell-level">
+                                <div><label for="lvl-5">Lvl</label></div>
+                                <div><input class="slot-level" id="lvl-5" type="number" value="5" readonly></div>
+                            </div>
+                            <div class="total-slots">
+                                <div><label for="total-slots-5">Total</label></div>
+                                <div><input class="slot-input" id="total-slots-5" type="number"></div>
+                            </div>
+                            <div class="spent-slots">
+                                <div><label for="spent-slots-5">Spent</label></div>
+                                <div><input class="slot-input" id="spent-slots-5" type="number"></div>
+                            </div>
+                        </div>
+                        <div class="slot">
+                            <div class="spell-level">
+                                <div><label for="lvl-6">Lvl</label></div>
+                                <div><input class="slot-level" id="lvl-6" type="number" value="6" readonly></div>
+                            </div>
+                            <div class="total-slots">
+                                <div><label for="total-slots-6">Total</label></div>
+                                <div><input class="slot-input" id="total-slots-6" type="number"></div>
+                            </div>
+                            <div class="spent-slots">
+                                <div><label for="spent-slots-6">Spent</label></div>
+                                <div><input class="slot-input" id="spent-slots-6" type="number"></div>
+                            </div>
+                        </div>
+                        <div class="slot">
+                            <div class="spell-level">
+                                <div><label for="lvl-7">Lvl</label></div>
+                                <div><input class="slot-level" id="lvl-7" type="number" value="7" readonly></div>
+                            </div>
+                            <div class="total-slots">
+                                <div><label for="total-slots-7">Total</label></div>
+                                <div><input class="slot-input" id="total-slots-7" type="number"></div>
+                            </div>
+                            <div class="spent-slots">
+                                <div><label for="spent-slots-7">Spent</label></div>
+                                <div><input class="slot-input" id="spent-slots-7" type="number"></div>
+                            </div>
+                        </div>
+                        <div class="slot">
+                            <div class="spell-level">
+                                <div><label for="lvl-8">Lvl</label></div>
+                                <div><input class="slot-level" id="lvl-8" type="number" value="8" readonly></div>
+                            </div>
+                            <div class="total-slots">
+                                <div><label for="total-slots-8">Total</label></div>
+                                <div><input class="slot-input" id="total-slots-8" type="number"></div>
+                            </div>
+                            <div class="spent-slots">
+                                <div><label for="spent-slots-8">Spent</label></div>
+                                <div><input class="slot-input" id="spent-slots-8" type="number"></div>
+                            </div>
+                        </div>
+                        <div class="slot">
+                            <div class="spell-level">
+                                <div><label for="lvl-9">Lvl</label></div>
+                                <div><input class="slot-level" id="lvl-9" type="number" value="9" readonly></div>
+                            </div>
+                            <div class="total-slots">
+                                <div><label for="total-slots-9">Total</label></div>
+                                <div><input class="slot-input" id="total-slots-9" type="number"></div>
+                            </div>
+                            <div class="spent-slots">
+                                <div><label for="spent-slots-9">Spent</label></div>
+                                <div><input class="slot-input" id="spent-slots-9" type="number"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>
